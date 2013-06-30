@@ -1,0 +1,11 @@
+---
+layout: post
+title: Going the Distance with Walkscore’s Travel Time API
+url: http://blog.programmableweb.com/2013/04/15/going-the-distance-with-walkscores-travel-time-api/
+source: http://blog.programmableweb.com/2013/04/15/going-the-distance-with-walkscores-travel-time-api/
+domain: blog.programmableweb.com
+image: http://kinlane-productions.s3.amazonaws.com/ap-evangelist-site/curated/screenshots/7531_blog_programmableweb_com.png
+---
+{% include JB/setup %}<p>You have a hectic business trip to Seattle coming up and its time to choose hotels.Sure, there’s cost, availability, checkout times ad whether it has a pool or gym to consider.But there’s another important factor: proximity.The Travel Time API demo uses Seattle.See graphic below.</p>
+<center><p><a href="http://blog.programmableweb.com/2013/04/15/going-the-distance-with-walkscores-travel-time-api/" style='padding:25px; font-sze:18px; font-weight: bold;'>Read Full Story</a></p></center>
+
