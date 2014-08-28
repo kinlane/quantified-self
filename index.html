@@ -9,31 +9,24 @@ title: Quantified Self
 <p>The Quantified Self is a movement to incorporate technology into data acquisition on aspects of a person's daily life in terms of inputs (e.g. food consumed, quality of surrounding air), states (e.g. mood, arousal, blood oxygen levels), and performance (mental and physical). Such self-monitoring and self-sensing, which combines wearable sensors and wearable computing, is also known as lifelogging or sousveillance. Other names for using self-tracking data to improve daily functioning are “self-tracking”, “body hacking” and“self-quantifying”.</p> 
 <p>In this section I will be tracking on news and companies that are doing interesting things around APIs and the quanitfied self, while also sharing blog analysis as well.</p>
 
-{% raw  %}
-<script id="companyListingTemplate" type="text/template">       
-    <li style="list-style: none; padding: 30px; border: 0px solid #000;">
-        <a href="companies-detail.html?id={{id}}"><img src="{{logo}}" width="200" align="left" style="padding: 15px;" /></a>
-        <a href="companies-detail.html?id={{id}}" style="color: #000;"><strong>{{name}}</strong></a> - {{summary}}... <a href="companies-detail.html?id={{id}}">details</a>.
-    </li>                                                                                               
-</script>
-{% endraw %}
+<hr />                
+   
+<h2>Updates</h2>            
+{% for post in site.posts limit:5 %}
+<div class="post">
+    
+    <p><a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}" style="color:#000;"><h4><strong>{{ post.title }}</strong></h4></a> (<i><strong><span class="small">Posted on</span> <span class="post-date">{{ post.date | date:"%m-%d-%Y" }}</span></strong></i>)
+    <p><a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}"><img src="{{ post.image }}" width="175" align="left" style="padding: 15px;" /></a></p>
+    <p>{{ post.content | strip_html | truncatewords: 100 }}...<a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}" style="color:#000; font-weight: bold;">read more</a>.</p>
+    <br />
+    <hr />     
+   
+</div> 
+{% endfor %} 
 
-<p><a id="jsonlink" href="data/companies.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-json-data-store.png" align="right" width="50" style="padding-top: 10px;" /></a></p>
-<div style="padding-left: 10px; padding-right: 10px; width:550px;">
-     <ul id="companyListing" style="padding-left: 30px;"></ul>
-</div>  
-
-<script type="text/javascript">
-function listCompanies()
-    {
-    $.getJSON('data/companies.json', function(data) {
-        toggle = 0;
-         $.each(data['company'], function(key, val) {
-            var template = $('#companyListingTemplate').html();
-            var html = Mustache.to_html(template, val);
-            $('#companyListing').append(html);                          
-            });
-        });
-    } 
-listCompanies();
-</script>
+<!-- 3scale -->
+<p align="center">
+    <a href="http://bit.ly/13esk6Q" target="_blank" title="APIs From 3Scale">
+        <img src="https://s3.amazonaws.com/kinlane-productions/api-service-providers/3Scale/empowered-by-3scale.png" width="300" style="padding-bottom: 15px;" />
+    </a>        
+</p> 
